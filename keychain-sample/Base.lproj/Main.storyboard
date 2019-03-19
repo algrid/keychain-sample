@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="keychain_sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esS-TB-BrT">
+                                <rect key="frame" x="16" y="90" width="107" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Create entry"/>
+                                <connections>
+                                    <action selector="onCreateClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bga-Vx-Vtu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a password protected Keychain entry with string &quot;hello&quot; protected by password &quot;querty&quot;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1HC-4l-1Ij">
+                                <rect key="frame" x="16" y="132" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7u-WM-baB">
+                                <rect key="frame" x="16" y="35" width="343" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="BFb-w5-xwO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnc-hr-ybz">
+                                <rect key="frame" x="16" y="180" width="177" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Access entry (basic)"/>
+                                <connections>
+                                    <action selector="onAccessBasicClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="thf-rI-1vc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access password protected Keychain entry using system-provided UI" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjY-Sr-zhr">
+                                <rect key="frame" x="16" y="308" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsl-bN-OYA">
+                                <rect key="frame" x="16" y="266" width="223" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Access entry (LAContext)"/>
+                                <connections>
+                                    <action selector="onAccessContextClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BwK-q3-23F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOS-ju-iwa">
+                                <rect key="frame" x="16" y="352" width="157" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Access entry (pw)"/>
+                                <connections>
+                                    <action selector="onAccessPwClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="14N-Wg-Wq9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access password protected Keychain entry using system-rpovided UI" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPt-bm-NZB">
+                                <rect key="frame" x="16" y="392" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access password protected Keychain entry using system-provided UI" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAJ-DU-e4g">
+                                <rect key="frame" x="16" y="222" width="343" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F5e-cO-upl">
+                                <rect key="frame" x="205" y="354" width="154" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x7u-WM-baB" secondAttribute="trailing" constant="16" id="081-Rg-Hh6"/>
+                            <constraint firstItem="ZjY-Sr-zhr" firstAttribute="top" secondItem="Rsl-bN-OYA" secondAttribute="bottom" constant="6" id="1tO-3f-JaR"/>
+                            <constraint firstItem="x7u-WM-baB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6lt-xx-TsS"/>
+                            <constraint firstItem="ZOS-ju-iwa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8Pq-hv-0ky"/>
+                            <constraint firstItem="ZOS-ju-iwa" firstAttribute="top" secondItem="ZjY-Sr-zhr" secondAttribute="bottom" constant="8" id="AwL-RE-z9d"/>
+                            <constraint firstItem="F5e-cO-upl" firstAttribute="leading" secondItem="ZOS-ju-iwa" secondAttribute="trailing" constant="32" id="Efh-eN-PCv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tPt-bm-NZB" secondAttribute="trailing" constant="16" id="HhW-we-QHv"/>
+                            <constraint firstItem="tPt-bm-NZB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KWA-PN-TEX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1HC-4l-1Ij" secondAttribute="trailing" constant="16" id="Koe-Id-DJa"/>
+                            <constraint firstItem="AAJ-DU-e4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OsW-CL-aiP"/>
+                            <constraint firstItem="pnc-hr-ybz" firstAttribute="top" secondItem="1HC-4l-1Ij" secondAttribute="bottom" constant="12" id="TDO-by-oDR"/>
+                            <constraint firstItem="tPt-bm-NZB" firstAttribute="top" secondItem="ZOS-ju-iwa" secondAttribute="bottom" constant="4" id="Vxt-ab-xcU"/>
+                            <constraint firstItem="pnc-hr-ybz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="W5k-w3-GRm"/>
+                            <constraint firstItem="Rsl-bN-OYA" firstAttribute="top" secondItem="AAJ-DU-e4g" secondAttribute="bottom" constant="8" id="WwE-rO-biV"/>
+                            <constraint firstItem="ZjY-Sr-zhr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XCe-ue-T3R"/>
+                            <constraint firstItem="Rsl-bN-OYA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aES-Yf-9Tj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AAJ-DU-e4g" secondAttribute="trailing" constant="16" id="aXW-jg-TtJ"/>
+                            <constraint firstItem="1HC-4l-1Ij" firstAttribute="top" secondItem="esS-TB-BrT" secondAttribute="bottom" constant="6" id="cZJ-0Y-27A"/>
+                            <constraint firstItem="F5e-cO-upl" firstAttribute="top" secondItem="ZjY-Sr-zhr" secondAttribute="bottom" constant="10" id="ckj-0d-AMm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZjY-Sr-zhr" secondAttribute="trailing" constant="16" id="eMh-9b-9cj"/>
+                            <constraint firstItem="esS-TB-BrT" firstAttribute="top" secondItem="x7u-WM-baB" secondAttribute="bottom" constant="34.5" id="edc-mu-dHh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F5e-cO-upl" secondAttribute="trailing" constant="16" id="f7x-km-uiy"/>
+                            <constraint firstItem="1HC-4l-1Ij" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="igq-UG-7Kc"/>
+                            <constraint firstItem="x7u-WM-baB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="pTt-Sf-O3v"/>
+                            <constraint firstItem="esS-TB-BrT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qtK-R6-zGp"/>
+                            <constraint firstItem="AAJ-DU-e4g" firstAttribute="top" secondItem="pnc-hr-ybz" secondAttribute="bottom" constant="6" id="slB-hA-rYK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pwTextField" destination="F5e-cO-upl" id="CVU-g7-IMN"/>
+                        <outlet property="statusLabel" destination="x7u-WM-baB" id="208-MX-29W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
