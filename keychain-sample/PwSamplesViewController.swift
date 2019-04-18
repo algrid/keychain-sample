@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PwSamplesViewController.swift
 //  keychain-sample
 //
 //  Created by Alexei Gridnev on 3/11/19.
@@ -9,9 +9,9 @@
 import UIKit
 import LocalAuthentication
 
-class ViewController: UIViewController {
+class PwSamplesViewController: UIViewController {
     
-    let entryName = "test_entry"
+    let entryName = "test_entry_pass"
     let entryContents = "Hello!"
     let entryPassword = "qwerty"
 
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        showStatus(nil)
+        showStatus("---")
     }
 
     @IBAction func onCreateClick(_ sender: Any) {

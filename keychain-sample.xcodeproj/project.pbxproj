@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B1ACA462257F7EF00A08135 /* BioSamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1ACA452257F7EF00A08135 /* BioSamplesViewController.swift */; };
 		7B64C5FB2237090100392AE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64C5FA2237090100392AE9 /* AppDelegate.swift */; };
-		7B64C5FD2237090100392AE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64C5FC2237090100392AE9 /* ViewController.swift */; };
+		7B64C5FD2237090100392AE9 /* PwSamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64C5FC2237090100392AE9 /* PwSamplesViewController.swift */; };
 		7B64C6002237090100392AE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B64C5FE2237090100392AE9 /* Main.storyboard */; };
 		7B64C6022237090100392AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B64C6012237090100392AE9 /* Assets.xcassets */; };
 		7B64C6052237090100392AE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B64C6032237090100392AE9 /* LaunchScreen.storyboard */; };
@@ -16,9 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B1ACA452257F7EF00A08135 /* BioSamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioSamplesViewController.swift; sourceTree = "<group>"; };
 		7B64C5F72237090100392AE9 /* keychain-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "keychain-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B64C5FA2237090100392AE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7B64C5FC2237090100392AE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7B64C5FC2237090100392AE9 /* PwSamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PwSamplesViewController.swift; sourceTree = "<group>"; };
 		7B64C5FF2237090100392AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B64C6012237090100392AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B64C6042237090100392AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				7B64C5FA2237090100392AE9 /* AppDelegate.swift */,
-				7B64C5FC2237090100392AE9 /* ViewController.swift */,
+				7B64C5FC2237090100392AE9 /* PwSamplesViewController.swift */,
 				7B64C5FE2237090100392AE9 /* Main.storyboard */,
 				7B64C6012237090100392AE9 /* Assets.xcassets */,
 				7B64C6032237090100392AE9 /* LaunchScreen.storyboard */,
 				7B64C6062237090100392AE9 /* Info.plist */,
 				7B64C60C2237101000392AE9 /* KeychainHelper.swift */,
+				7B1ACA452257F7EF00A08135 /* BioSamplesViewController.swift */,
 			);
 			path = "keychain-sample";
 			sourceTree = "<group>";
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B64C5FD2237090100392AE9 /* ViewController.swift in Sources */,
+				7B64C5FD2237090100392AE9 /* PwSamplesViewController.swift in Sources */,
 				7B64C60D2237101000392AE9 /* KeychainHelper.swift in Sources */,
 				7B64C5FB2237090100392AE9 /* AppDelegate.swift in Sources */,
+				7B1ACA462257F7EF00A08135 /* BioSamplesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JFDPEZG4TB;
 				INFOPLIST_FILE = "keychain-sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JFDPEZG4TB;
 				INFOPLIST_FILE = "keychain-sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
