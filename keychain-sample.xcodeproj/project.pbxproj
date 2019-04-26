@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B012B332271FAF8002FA0B1 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B012B322271FAF8002FA0B1 /* UIUtils.swift */; };
+		7B012B36227202BE002FA0B1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B012B35227202BE002FA0B1 /* Utils.swift */; };
 		7B1ACA462257F7EF00A08135 /* BioSamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1ACA452257F7EF00A08135 /* BioSamplesViewController.swift */; };
 		7B64C5FB2237090100392AE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64C5FA2237090100392AE9 /* AppDelegate.swift */; };
 		7B64C5FD2237090100392AE9 /* PwSamplesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64C5FC2237090100392AE9 /* PwSamplesViewController.swift */; };
@@ -14,9 +16,12 @@
 		7B64C6022237090100392AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B64C6012237090100392AE9 /* Assets.xcassets */; };
 		7B64C6052237090100392AE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B64C6032237090100392AE9 /* LaunchScreen.storyboard */; };
 		7B64C60D2237101000392AE9 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B64C60C2237101000392AE9 /* KeychainHelper.swift */; };
+		7BC68893226E23A90086EDD0 /* SecuredKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC68892226E23A90086EDD0 /* SecuredKeyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B012B322271FAF8002FA0B1 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
+		7B012B35227202BE002FA0B1 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7B1ACA452257F7EF00A08135 /* BioSamplesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioSamplesViewController.swift; sourceTree = "<group>"; };
 		7B64C5F72237090100392AE9 /* keychain-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "keychain-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B64C5FA2237090100392AE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 		7B64C6042237090100392AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B64C6062237090100392AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B64C60C2237101000392AE9 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		7BC68892226E23A90086EDD0 /* SecuredKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecuredKeyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B012B34227202A2002FA0B1 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				7B012B322271FAF8002FA0B1 /* UIUtils.swift */,
+				7B012B35227202BE002FA0B1 /* Utils.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		7B64C5EE2237090100392AE9 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +73,7 @@
 		7B64C5F92237090100392AE9 /* keychain-sample */ = {
 			isa = PBXGroup;
 			children = (
+				7B012B34227202A2002FA0B1 /* utils */,
 				7B64C5FA2237090100392AE9 /* AppDelegate.swift */,
 				7B64C5FC2237090100392AE9 /* PwSamplesViewController.swift */,
 				7B64C5FE2237090100392AE9 /* Main.storyboard */,
@@ -66,6 +82,7 @@
 				7B64C6062237090100392AE9 /* Info.plist */,
 				7B64C60C2237101000392AE9 /* KeychainHelper.swift */,
 				7B1ACA452257F7EF00A08135 /* BioSamplesViewController.swift */,
+				7BC68892226E23A90086EDD0 /* SecuredKeyViewController.swift */,
 			);
 			path = "keychain-sample";
 			sourceTree = "<group>";
@@ -144,6 +161,9 @@
 				7B64C5FD2237090100392AE9 /* PwSamplesViewController.swift in Sources */,
 				7B64C60D2237101000392AE9 /* KeychainHelper.swift in Sources */,
 				7B64C5FB2237090100392AE9 /* AppDelegate.swift in Sources */,
+				7B012B36227202BE002FA0B1 /* Utils.swift in Sources */,
+				7B012B332271FAF8002FA0B1 /* UIUtils.swift in Sources */,
+				7BC68893226E23A90086EDD0 /* SecuredKeyViewController.swift in Sources */,
 				7B1ACA462257F7EF00A08135 /* BioSamplesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

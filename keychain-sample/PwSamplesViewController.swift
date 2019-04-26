@@ -11,7 +11,7 @@ import LocalAuthentication
 
 class PwSamplesViewController: UIViewController {
     
-    let entryName = "test_entry_pass"
+    let entryName = "keychain-sample.test_entry_pass"
     let entryContents = "Hello!"
     let entryPassword = "qwerty"
 
@@ -78,11 +78,6 @@ class PwSamplesViewController: UIViewController {
     }
     
     private func showStatus(_ text: String?) {
-        statusLabel.text = text
-        statusLabel.alpha = 0.0
-        UIView.animate(withDuration: 1.0) {
-            self.statusLabel.alpha = 1.0
-        }
+        statusLabel.setTextWithAlphaAnimation(text)
     }
 }
-

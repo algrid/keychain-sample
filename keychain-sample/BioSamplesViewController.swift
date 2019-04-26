@@ -26,7 +26,7 @@ class BioSamplesViewController: UIViewController {
         }
     }
 
-    let entryName = "test_entry_bio"
+    let entryName = "keychain-sample.test_entry_bio"
     let entryContents = "Hello!"
     
     @IBOutlet weak var biometryStateLabel: UILabel!
@@ -147,10 +147,6 @@ class BioSamplesViewController: UIViewController {
     }
     
     private func showStatus(_ text: String?) {
-        statusLabel.text = text
-        statusLabel.alpha = 0.0
-        UIView.animate(withDuration: 1.0) {
-            self.statusLabel.alpha = 1.0
-        }
+        statusLabel.setTextWithAlphaAnimation(text)
     }
 }
