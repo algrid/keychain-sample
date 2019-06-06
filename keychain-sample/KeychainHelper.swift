@@ -162,8 +162,14 @@ class KeychainHelper {
                                 requiresBiometry: Bool = false) throws -> SecKey {
         removeKey(name: name)
 
-        let flags: SecAccessControlCreateFlags = requiresBiometry ?
-            [.privateKeyUsage, .touchIDCurrentSet] : .privateKeyUsage
+        let flags: SecAccessControlCreateFlags
+        if #available(iOS 11.3, *) {
+            flags = requiresBiometry ?
+                [.privateKeyUsage, .biometryCurrentSet] : .privateKeyUsage
+        } else {
+            flags = requiresBiometry ?
+                [.privateKeyUsage, .touchIDCurrentSet] : .privateKeyUsage
+        }
         let access =
             SecAccessControlCreateWithFlags(kCFAllocatorDefault,
                                             kSecAttrAccessibleWhenUnlockedThisDeviceOnly,

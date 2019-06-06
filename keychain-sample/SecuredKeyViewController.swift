@@ -82,16 +82,16 @@ class SecuredKeyViewController: UIViewController {
                                          text: "Can't get public key", from: self)
             return
         }
-        let algorithm: SecKeyAlgorithm = .eciesEncryptionCofactorX963SHA256AESGCM
+        let algorithm: SecKeyAlgorithm = .eciesEncryptionCofactorVariableIVX963SHA256AESGCM
         guard SecKeyIsAlgorithmSupported(publicKey, .encrypt, algorithm) else {
             UIAlertController.showSimple(title: "Can't encrypt",
                                          text: "Algorith not supported", from: self)
             return
         }
         var error: Unmanaged<CFError>?
-        let plainTextData = clearText.data(using: .utf8)!
+        let clearTextData = clearText.data(using: .utf8)!
         cipherTextData = SecKeyCreateEncryptedData(publicKey, algorithm,
-                                                   plainTextData as CFData,
+                                                   clearTextData as CFData,
                                                    &error) as Data?
         guard cipherTextData != nil else {
             UIAlertController.showSimple(title: "Can't encrypt",
@@ -113,12 +113,17 @@ class SecuredKeyViewController: UIViewController {
                                          from: self)
             return
         }
-
+        let algorithm: SecKeyAlgorithm = .eciesEncryptionCofactorVariableIVX963SHA256AESGCM
+        guard SecKeyIsAlgorithmSupported(self.key!, .decrypt, algorithm) else {
+            UIAlertController.showSimple(title: "Can't decrypt",
+                                         text: "Algorith not supported", from: self)
+            return
+        }
+        
         // SecKeyCreateDecryptedData call is blocking when the used key
         // is protected by biometry authentication. If that's not the case,
         // dispatching to a background thread isn't necessary.
         DispatchQueue.global().async {
-            let algorithm: SecKeyAlgorithm = .eciesEncryptionCofactorX963SHA256AESGCM
             var error: Unmanaged<CFError>?
             let clearTextData = SecKeyCreateDecryptedData(self.key!,
                                                           algorithm,
@@ -206,10 +211,10 @@ class SecuredKeyViewController: UIViewController {
                                          from: self)
             return
         }
-        let plainTextData = clearText.data(using: .utf8)!
+        let clearTextData = clearText.data(using: .utf8)!
         var error: Unmanaged<CFError>?
         guard SecKeyVerifySignature(publicKey, algorithm,
-                                    plainTextData as CFData,
+                                    clearTextData as CFData,
                                     signature! as CFData,
                                     &error) else {
             // Can't verify/wrong signature
